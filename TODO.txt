@@ -1,0 +1,13 @@
+
+
+chatgtp add_task responds too enthusiasticly to "I started X"
+	for some reason it thinks that's a new task to add and not updating the status of a task
+
+
+https://codeconfessions.substack.com/p/navigating-sharp-edges-in-openais
+	has some interesting things
+	eg: possibly I should be returning a result for chatgtp functions, so chatgtp responds, rather than me putting out a manual reply?
+
+
+write more tests
+?move services to chat_gtp folder

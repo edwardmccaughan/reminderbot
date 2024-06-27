@@ -1,0 +1,21 @@
+
+<main data-controller="messages-index" class="bg-white px-6 py-6 ">
+  
+  <div class="flex max-w-7xl mx-auto">
+    <div id="tasks_sidebar" class="w-96 border-r border-blue-300 mr-10">
+      <%= render 'messages/sidebar' %>
+    </div>
+    <div class="w-[40rem] text-center">
+    
+      <div class="header mx-auto text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-8">What are you doing today?</h2>
+      </div>
+
+      <div id="messages" data-messages-index-target="list" data-action="message@window->messages-index#append">
+        <%= render @messages %>
+      </div>
+
+      <%= turbo_frame_tag id="new_message", src:new_message_path %>
+    </div>
+  </div>
+</main>
