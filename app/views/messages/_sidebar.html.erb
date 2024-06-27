@@ -1,0 +1,26 @@
+<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded text-sm" href="/delete_tasks">delete tasks</a>
+<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded text-sm" href="/delete_messages">delete messages</a>
+<a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded text-sm" href="/new_thread">new thread</a>
+
+<h3 class="mt-4 text-xl font-bold tracking-tight text-gray-900">Tasks:</h3>
+
+<div class="mt-8 flow-root">
+  <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+      <table class="min-w-full divide-y divide-gray-300">
+        <thead>
+          <tr>
+            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0">Task</th>
+            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Status</th>
+            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Due date</th>
+          </tr>
+        </thead>
+
+        <%= turbo_stream_from :tasks %>
+        <tbody id="tasks_table" class="divide-y divide-gray-200">
+          <%= render @tasks %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

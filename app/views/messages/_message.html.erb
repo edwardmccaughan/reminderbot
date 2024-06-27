@@ -1,0 +1,5 @@
+<% htmlclass = (message.source == "user") ? "text-left text-blue-600" : "text-right text-orange-600" %>
+
+<li class="<%= htmlclass %> mb-1">
+	<%= message.body.html_safe %>
+</li>

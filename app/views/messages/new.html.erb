@@ -1,0 +1,6 @@
+<%= turbo_frame_tag id="new_message" do %>
+	<%= simple_form_for Message.new, html: { class: "message form mt-4", "data-controller" => "messages-form", "data-action" => "submit->messages-form#clear" } do |f| %>
+		<%= f.input :body, label:false, input_html: { autofocus: true,  class: "block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6", "data-messages-form-target" => "body"} %>
+		<%= f.submit class: "btn btn--secondary hidden" %>
+	<% end %>
+<% end %>
